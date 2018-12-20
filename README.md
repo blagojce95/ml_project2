@@ -1,6 +1,6 @@
-# Project 1 : Detecting Higgs Boson
+# Project 2 : Twitter Sentiment Classification
 
-This project was created as part of the Machine Learning course [ **CS-433** ] at EPFL. 
+This project was created as part of the Machine Learning course [ **CS-433** ] at EPFL. ABSTRACT HERE
 
 ## Getting Started
 
@@ -60,7 +60,7 @@ Before running the model, please unzip the `data.zip` file in the folder `data`.
 python run.py
 ```
 
-After running the script `run.py` you can find the generated predictions in the file `results/LSTM.csv`. Our final predictions are in the file `results/final_LSTM.csv.csv` for comparison.
+After running the script `run.py` you can find the generated predictions in the file `results/LSTM.csv`. Our final predictions are in the file `results/final_LSTM.csv` for comparison.
 
 ## Training models
 
@@ -69,6 +69,8 @@ If you want to train some of the model for example the CNN model, just run:
 ```
 python train_CNN.py
 ```
+
+The model parameters can be changed by editing the `train_CNN.py` file and the model architecture by editing the `models/CNN_model.py` file.
 
 ## Authors
 
