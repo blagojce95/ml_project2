@@ -1,6 +1,6 @@
 # Project 2 : Twitter Sentiment Classification
 
-This project was created as part of the Machine Learning course [ **CS-433** ] at EPFL. ABSTRACT HERE
+This project was created as part of the Machine Learning course [ **CS-433** ] at EPFL. We developed a tweet sentiment classification pipeline including preprocessing steps, sequential representation of tweets, and some state-of-the-art neural architectures for tweet classification. The best and final model was obtained with the LSTM architecture. 
 
 ## Getting Started
 
@@ -12,10 +12,10 @@ The project was created and tested with the following dependencies:
 ### Libraries
 ```
 - Anaconda Python 3.6.5
-- numpy
-- pandas
-- h5py
-- scikit-learn
+- numpy=1.15.4
+- pandas=0.23.4
+- h5py=2.8.0
+- scikit-learn=0.20.1
 - keras-gpu=2.0.8
 - tensorflow-gpu=1.4.1
 ```
@@ -23,15 +23,18 @@ The project was created and tested with the following dependencies:
 ### Datasets
 The pretrained GloVe embeddings and the Twitter datasets can be downloaded from the following links:
 
-link1: https://drive.google.com/open?id=1pqY5LHdB4R101G9MUaVygXeUYRgXX8k6
-link2: mac dodaj link tuka za redundunacy
+link 1: https://drive.google.com/open?id=1pqY5LHdB4R101G9MUaVygXeUYRgXX8k6
+
+mirror (in case of problems): https://drive.google.com/file/d/1S3BD_hBa16i9mozQ3y75j5OU0B15sDl6/view?usp=sharing
 
 Just extract the zip file into the `data` folder. The data is the same as provided on the GloVe website and crowdAI competition, but named and organized as used in our code.
 
 ### Model weights
 Our final trained model can be downloaded from the following link:
 
-link1: https://drive.google.com/open?id=1wbDzVXizOOwCdPRN3rQIWvKN-EvoHgO5
+link 1: https://drive.google.com/open?id=1wbDzVXizOOwCdPRN3rQIWvKN-EvoHgO5
+
+mirror (in case of problems): 
 
 Exrtact the zip file into the `models_checkpoints` folder.
 
@@ -62,9 +65,9 @@ The project is organized as follows:
     ├── train_LSTM.py                   # Script for training the LSTM model
     └── train_LSTM_CNN.py               # Script for training the LSTM-CNN model
     
-## Running
+## Reproducing our results
 
-Before running the model, please unzip the `data.zip` file in the `data` folder and the `LSTM.zip` file in the `models_checkpoints` folder. To reproduce our results run the following command:
+In order to reproduce our results, please unzip the `data.zip` file in the `data` folder and the `LSTM.zip` file in the `models_checkpoints` folder. Then, to obtain the same predictions as us run the following command:
 
 ``` 
 python run.py
@@ -74,13 +77,13 @@ After running the script `run.py` you can find the generated predictions in the 
 
 ## Training models
 
-If you want to train some of the model for example the CNN model, just run:
+If you want to train some of the model with your own parameters, you can use the train_\*.py files. For example, for training CNN, you can use the following command. 
 
 ```
 python train_CNN.py
 ```
 
-The model parameters can be changed by editing the `train_CNN.py` file and the model architecture by editing the `models/CNN_model.py` file.
+The model parameters can be changed by editing the params dictionary in the `train_CNN.py` file, and the model architecture can be changed by editing the build_model() method in the `models/CNN_model.py` file.
 
 ## Authors
 
