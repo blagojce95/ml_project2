@@ -2,6 +2,12 @@
 
 This project was created as part of the Machine Learning course [ **CS-433** ] at EPFL. We developed a tweet sentiment classification pipeline including preprocessing steps, sequential representation of tweets, and some state-of-the-art neural architectures for tweet classification. The best and final model was obtained with the LSTM architecture. 
 
+## crowdAI submission
+
+- Name: Martin Milenkoski
+- ID: 25120
+- Link: https://www.crowdai.org/challenges/48/submissions/25120
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
