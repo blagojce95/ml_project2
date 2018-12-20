@@ -12,28 +12,29 @@ import os
 class BaseModel():
     """This class is base class for the models and all the modes should extend this class.
     
-    The base class implements all the generic methods and functionalities for the models such as training, saiving the models during training, evaluation of the models, loading of previously saved models
+    The base class implements all the generic methods and functionalities for the models such as training, saving the models during training, evaluation of the models, loading of previously saved models
     and generating csv file with predictions for submitting on crowdAI platform. This way, the functionalities are implemented only once and all the models reuse these functionalities.
     
-    To create a new model, the user first must create a class in the `models` dictionary, inherit this `BaseModel` class and implement the `build()` function which sets the `model` parameter. After that,
-    the user can use all the functions which are implemented here in the `BaseModel` class.
+    To create a new model, the user first must create a class in the `models` directory, inherit this `BaseModel` class and implement the `build_model()` function which sets the `model` parameters. 
+    After that, the user can use all the functions which are implemented here in the `BaseModel` class.
 
     Parameters
     ----------
     model_name : str
-        The `model_name` parameter is used as a name for a checkpoint dictionary inside models checkpoints dictionary, during the training of the model in this dictionary we save the model with its weights, the history of the training and validation loss/accuracy and the tensorboard.
+        The `model_name` parameter is used as a name for a checkpoint directory inside the models checkpoints directory. During the training of the model, in this directory we save the model with its
+        weights, the history of the training and validation loss/accuracy and the tensorboard.
     model : object
         This is object representing the actual keras model.
     model_dir : str
-        The path to the models dictionary obtained with concatenating the models checkpoint dictionary with the models name.
+        The path to the models directory obtained with concatenating the models checkpoint directory with the models name.
     checkpoint_path : str
         The path to the hdf5 file where the models weights are stored.
     tensorboard_path : str
-        The path to the dictionary where the tensorboard files are stored.
+        The path to the directory where the tensorboard files are stored.
     model_json_path : str
         The path to the json file where the model architecture is stored.
     history_path : str
-        The path to the history dictionary where the training and validation loss/accuracy are stored.
+        The path to the history directory where the training and validation loss/accuracy are stored.
 
     Attributes
     ----------
@@ -67,7 +68,8 @@ class BaseModel():
     def train(self, X, y, epochs, batch_size, validation_data=None):
         """This method is used for training the model.
         
-        After the `model` parameter is set, this function can be used to train the model. Before training the model, the model arhitecture is saved, tensorboard is created for monitoring the training process and while training the model after each epoch the models weights and the training and validation loss/accuracy are stored. All these files can be found in `model_dir` dictionary.
+        After the `model` parameter is set, this function can be used to train the model. Before training the model, the model arhitecture is saved and tensorboard is created for monitoring the training
+	process. While training the model after each epoch the models weights and the training and validation loss/accuracy are stored. All these files can be found in the `model_dir` directory.
 
         Parameters
         ----------
@@ -127,7 +129,8 @@ class BaseModel():
     def load(self):
         """This method is used for loading the model.
         
-        If a model exists with the initialized name, this function can be used to load its architecture, its weights and comple the model. After loading the model, it can be used for predicting new data or it can be retrained on new data.
+        If a model exists with the initialized name, this function can be used to load its architecture, its weights and compile the model. After loading the model, it can be used for predicting new data
+	or it can be retrained on new data.
 
         """
         model_json = json.load(open(self.model_json_path, "r"))
@@ -139,12 +142,13 @@ class BaseModel():
     def predict_and_save_predictions(self, X_test, file_name, batch_size=1024):
         """This method is used for predicting the labels of the `X_test` data and saving them in csv format ready for submitting on crowdAI.
         
-        After the predictions are obtained, the zeros are replaced by `-1`, and an Id is assigned to every prediction. Everything is stored in a pandas DataFrame and saved in csv format in the `results` dictionary.
+        After the predictions are obtained, the zeros are replaced by `-1`, and an Id is assigned to every prediction. Everything is stored in a pandas DataFrame and saved in csv format in the `results` 
+	directory.
 
         Parameters
         ----------
         X_test : ndarray
-            Numpay array containing the testing data.
+            Numpy array containing the testing data.
         file_name : string
             Name of the file where the predictions will be stored.            
         batch_size : int

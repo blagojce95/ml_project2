@@ -3,11 +3,10 @@ import numpy as np
 import sys
 from keras.preprocessing.sequence import pad_sequences
 import re
-import nltk
 import json
 
 def generate_data(GLOVE_DIMENSION=25, MAX_WORDS=40, FULL=False):
-    """This method does the preprocessing of the tweets and generated all the data.
+    """This method does the preprocessing of the tweets and generates all the data.
 
     Attributes
     ----------
@@ -16,7 +15,7 @@ def generate_data(GLOVE_DIMENSION=25, MAX_WORDS=40, FULL=False):
     MAX_WORDS : int
         The length of the tweet, in our case the number of word vectors every tweet should contain.
     FULL : boolean
-        Dictionary containing all the parameters for the LSTM model like "LSTM_num_neurons" etc...
+        Whether to use full or sample dataset.
 
     """
     # Loading the constants
@@ -200,8 +199,6 @@ def preprocess_tweet(tweet):
     
     # Replace numbers with <number>.
     tweet = re.sub(r"[-+]?[.\d]*[\d]+[:,.\d]*", " <number> ", tweet, flags = FLAGS)
-    
-    # TODO: Split Hashtags
     
     # Replace repeated punctuation with <repeat>. Ex. !!! -> ! <repeat>
     tweet = re.sub(r"([!?.]){2,}", r"\1 <repeat> ", tweet, flags = FLAGS)

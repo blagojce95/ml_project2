@@ -39,7 +39,7 @@ lstm = LSTM_model(model_name)
 # Build the model and print its summary
 lstm.build_model(embedding_matrix, max_words, params)
 print(lstm.model.summary())
-# Train the model, saves the weights which give the best validation loss
+# Train the model, and save the weights which give the best validation loss
 lstm.train(X_train, Y_train, epochs=params["epochs"], batch_size=params["batch_size"], validation_data=(X_val, Y_val))
 
 print('_________________________________')

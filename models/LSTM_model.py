@@ -20,7 +20,8 @@ class LSTM_model(BaseModel):
     def build_model(self, embedding_matrix, seq_len, params):
         """This method is used to define and compile the keras model.
         
-        The first layer allways is the Embedding layer used to embed the word sequences to vector sequences which than are send to the LSTM layer. After the LSTM layer there is a Dense layer which outputs the probability for the tweet being of the first class.
+        The first layer always is the Embedding layer used to embed the word sequences to vector sequences which then are send to the LSTM layer. After the LSTM layer there is a Dense layer which outputs
+	the probability for the tweet being of the first class.
 
         Parameters
         ----------
@@ -29,8 +30,7 @@ class LSTM_model(BaseModel):
         seq_len : ndarray
             The length of the tweet, in our case the number of word vectors every tweet should contain.
         params : dic
-            Dictionary containing all the parameters for the LSTM model like "LSTM_num_neurons" etc...
-
+            Dictionary containing all the parameters for the model
         """
         self.model = Sequential()
         

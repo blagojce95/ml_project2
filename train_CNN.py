@@ -40,7 +40,7 @@ cnn = CNN_model(model_name)
 # Build the model and print its summary
 cnn.build_model(embedding_matrix, max_words, params)
 print(cnn.model.summary())
-# Train the model, saves the weights which give the best validation loss
+# Trains the model, and saves the weights which give the best validation loss
 cnn.train(X_train, Y_train, epochs=params["epochs"], batch_size=params["batch_size"], validation_data=(X_val, Y_val))
 
 print('_________________________________')

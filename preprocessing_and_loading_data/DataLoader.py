@@ -7,16 +7,18 @@ from preprocessing_and_loading_data.generate_data import generate_data
 class DataLoader():
     """This class is used for loading the data.
     
-    Instead of preprocessing the tweets, rebulding the vocabulary and generating the embedding matrix everytime we run a model, we implemented this class which upon first creation of a object generates everything and saves the generated files. Every time a object is crated with the same parameters, the object reads the saved data, instead of regenerating it again. This way we save on time when training the models.
+    Instead of preprocessing the tweets, rebulding the vocabulary and generating the embedding matrix everytime we run a model, we implemented this class which upon first creation of a DataLoader object
+    generates everything and saves the generated files. Every time the object is cerated with the same parameters (glove_dimension, max_words, full) the object reads the saved data, instead of
+    regenerating it again. This way we save on time when training the models.
 
     Parameters
     ----------
-    GLOVE_DIMENSION : int
+    glove_dimension : int
         Integer number representing which GloVe embedding to be used, must be 25, 50, 100 or 200.
-    MAX_WORDS : int
+    max_words : int
         The length of the tweet, in our case the number of word vectors every tweet should contain.
-    FULL : boolean
-        Dictionary containing all the parameters for the LSTM model like "LSTM_num_neurons" etc...
+    full : boolean
+        Whether to use full or sample dataset.
     path : string
         The path where the generated data is saved.
 
@@ -31,7 +33,8 @@ class DataLoader():
     def load_data(self):
         """Helper function for loading the data.
         
-        First, it is checked if the data has already been generated. If it has been, then it is just simply loaded. If not, than the `generate_data` function from `generate_data.py` file is called to generate the data.
+        First, it is checked if the data has already been generated. If it has been, then it is simply loaded. If not, than the `generate_data` function from `generate_data.py` file is called to generate
+	the data.
 
         """
         if not os.path.isdir(self.path):
