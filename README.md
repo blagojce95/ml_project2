@@ -77,6 +77,13 @@ After running the script `run.py` you can find the generated predictions in the 
 
 ## Training models
 
+In this project, we have implemented 4 models:
+
+- CNN
+- LSTM
+- CNN-LSTM
+- LSTM-CNN
+
 If you want to train some of the model with your own parameters, you can use the train_\*.py files. For example, for training CNN, you can use the following command. 
 
 ```
