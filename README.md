@@ -44,7 +44,7 @@ Exrtact the zip file into the `models_checkpoints` folder.
 This project does not require any installation. To use, simply clone the repository to your local machine using the following command:
 
 ```
-git clone https://github.com/mmilenkoski/ml_project1.git
+git clone https://github.com/blagojce95/ml_project2.git
 ```
 
 ## Project Structure
