@@ -10,7 +10,8 @@ class LSTM_CNN_model(BaseModel):
     Attributes
     ----------
     model_name : str
-        The `model_name` parameter is used as a name for a checkpoint dictionary inside models checkpoints dictionary, for more details see `BaseModel` class.
+        The `model_name` parameter is used as a name for a checkpoint dictionary inside models checkpoints
+        dictionary, for more details see `BaseModel` class.
 
     """
     def __init__(self, model_name):
@@ -18,11 +19,14 @@ class LSTM_CNN_model(BaseModel):
 
 
     def build_model(self, embedding_matrix, seq_len, params):
-	"""This method is used to define and compile the keras model.
+        """This method is used to define and compile the keras model.
         
-        The first layer always is the Embedding layer used to embed the word sequences to vector sequences which then are send to the LSTM layer. The LSTM layer uses the global context to generate new
-	representations of the words. These new representations are send to the Convolutional layer which extract local features from the data. After the Convolutional layer, there is MaxPooling layer
-	which reduces the dimensionality of the problem. In the end, there is a Dense layer which outputs the probability for the tweet being of the first class.
+        The first layer always is the Embedding layer used to embed the word sequences to vector sequences 
+        which then are send to the LSTM layer. The LSTM layer uses the global context to generate new representations 
+        of the words. These new representations are send to the Convolutional layer which extract local features 
+        from the data. After the Convolutional layer, there is MaxPooling layer which reduces the dimensionality 
+        of the problem. In the end, there is a Dense layer which outputs the probability for the tweet being of 
+        the first class.
 
         Parameters
         ----------

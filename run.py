@@ -30,7 +30,7 @@ print(lstm.model.summary())
 # Get the testing data for submitting on crowdAI
 X_crowdAI_test = dl.get_test_data()
 # Save the predictions in the "predictions" folder with "model_name" name of the csv file
-lstm.predict_and_save_predictions(X_crowdAI_test, model_name, batch_size=params["batch_size"])
+lstm.predict_and_save_predictions(X_crowdAI_test, model_name, batch_size=1024)
 
 print('_________________________________')
 print(model_name)

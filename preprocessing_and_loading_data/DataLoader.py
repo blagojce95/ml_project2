@@ -7,9 +7,11 @@ from preprocessing_and_loading_data.generate_data import generate_data
 class DataLoader():
     """This class is used for loading the data.
     
-    Instead of preprocessing the tweets, rebulding the vocabulary and generating the embedding matrix everytime we run a model, we implemented this class which upon first creation of a DataLoader object
-    generates everything and saves the generated files. Every time the object is cerated with the same parameters (glove_dimension, max_words, full) the object reads the saved data, instead of
-    regenerating it again. This way we save on time when training the models.
+    Instead of preprocessing the tweets, rebulding the vocabulary and generating the embedding matrix 
+    everytime we run a model, we implemented this class which upon first creation of a DataLoader object 
+    generates everything and saves the generated files. Every time the object is cerated with the same 
+    parameters (glove_dimension, max_words, full) the object reads the saved data, instead of regenerating 
+    it again. This way we save on time when training the models.
 
     Parameters
     ----------
@@ -33,8 +35,9 @@ class DataLoader():
     def load_data(self):
         """Helper function for loading the data.
         
-        First, it is checked if the data has already been generated. If it has been, then it is simply loaded. If not, than the `generate_data` function from `generate_data.py` file is called to generate
-	the data.
+        First, it is checked if the data has already been generated. If it has been, then it is simply 
+        loaded. If not, than the `generate_data` function from `generate_data.py` file is called to generate 
+        the data.
 
         """
         if not os.path.isdir(self.path):

@@ -68,8 +68,10 @@ class BaseModel():
     def train(self, X, y, epochs, batch_size, validation_data=None):
         """This method is used for training the model.
         
-        After the `model` parameter is set, this function can be used to train the model. Before training the model, the model arhitecture is saved and tensorboard is created for monitoring the training
-	process. While training the model after each epoch the models weights and the training and validation loss/accuracy are stored. All these files can be found in the `model_dir` directory.
+        After the `model` parameter is set, this function can be used to train the model. Before training 
+        the model, the model arhitecture is saved and tensorboard is created for monitoring the training 
+        process. While training the model after each epoch the models weights and the training and validation 
+        loss/accuracy are stored. All these files can be found in the `model_dir` directory.
 
         Parameters
         ----------
@@ -129,8 +131,9 @@ class BaseModel():
     def load(self):
         """This method is used for loading the model.
         
-        If a model exists with the initialized name, this function can be used to load its architecture, its weights and compile the model. After loading the model, it can be used for predicting new data
-	or it can be retrained on new data.
+        If a model exists with the initialized name, this function can be used to load its architecture, 
+        its weights and compile the model. After loading the model, it can be used for predicting new data
+        or it can be retrained on new data.
 
         """
         model_json = json.load(open(self.model_json_path, "r"))
@@ -140,10 +143,11 @@ class BaseModel():
         print("Loading done!")
         
     def predict_and_save_predictions(self, X_test, file_name, batch_size=1024):
-        """This method is used for predicting the labels of the `X_test` data and saving them in csv format ready for submitting on crowdAI.
+        """This method is used for predicting the labels of the `X_test` data and saving them in csv format 
+        ready for submitting on crowdAI.
         
-        After the predictions are obtained, the zeros are replaced by `-1`, and an Id is assigned to every prediction. Everything is stored in a pandas DataFrame and saved in csv format in the `results` 
-	directory.
+        After the predictions are obtained, the zeros are replaced by `-1`, and an Id is assigned to every 
+        prediction. Everything is stored in a pandas DataFrame and saved in csv format in the `results` directory.
 
         Parameters
         ----------

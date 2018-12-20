@@ -3,7 +3,6 @@ from keras.models import Sequential
 from keras.layers import *
 
 class LSTM_model(BaseModel):
-    def __init__(self, model_name):
     """This is the LSTM model. It inherits from the `BaseModel` class.
     
     This class only implements the `build_model` function used to define and compile the keras model.
@@ -11,17 +10,20 @@ class LSTM_model(BaseModel):
     Attributes
     ----------
     model_name : str
-        The `model_name` parameter is used as a name for a checkpoint dictionary inside models checkpoints dictionary, for more details see `BaseModel` class.
+        The `model_name` parameter is used as a name for a checkpoint dictionary inside models checkpoints 
+        dictionary, for more details see `BaseModel` class.
 
     """
+    def __init__(self, model_name):
         super().__init__(model_name)
 
 
     def build_model(self, embedding_matrix, seq_len, params):
         """This method is used to define and compile the keras model.
         
-        The first layer always is the Embedding layer used to embed the word sequences to vector sequences which then are send to the LSTM layer. After the LSTM layer there is a Dense layer which outputs
-	the probability for the tweet being of the first class.
+        The first layer always is the Embedding layer used to embed the word sequences to vector sequences which then 
+        are send to the LSTM layer. After the LSTM layer there is a Dense layer which outputs the probability for the 
+        tweet being of the first class.
 
         Parameters
         ----------
