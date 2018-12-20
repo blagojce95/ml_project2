@@ -12,9 +12,11 @@ import os
 class BaseModel():
     """This class is base class for the models and all the modes should extend this class.
     
-    The base class implements all the generic methods and functionalities for the models such as training, saiving the models during training, evaluation of the models, loading of previously saved models and generating csv file with predictions for submitting on crowdAI platform. This way, the functionalities are implemented only once and all the models reuse these functionalities.
+    The base class implements all the generic methods and functionalities for the models such as training, saiving the models during training, evaluation of the models, loading of previously saved models
+    and generating csv file with predictions for submitting on crowdAI platform. This way, the functionalities are implemented only once and all the models reuse these functionalities.
     
-    To create a new model, the user first must create a class in the `models` dictionary, inherit this `BaseModel` class and implement the `build()` function which sets the `model` parameter. After that, the user can use all the functions which are implemented here in the `BaseModel` class.
+    To create a new model, the user first must create a class in the `models` dictionary, inherit this `BaseModel` class and implement the `build()` function which sets the `model` parameter. After that,
+    the user can use all the functions which are implemented here in the `BaseModel` class.
 
     Parameters
     ----------
