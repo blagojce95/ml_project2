@@ -27,14 +27,14 @@ link 1: https://drive.google.com/open?id=1pqY5LHdB4R101G9MUaVygXeUYRgXX8k6
 
 mirror (in case of problems): https://drive.google.com/file/d/1S3BD_hBa16i9mozQ3y75j5OU0B15sDl6/view?usp=sharing
 
-Just extract the zip file into the `data` folder. The data is the same as provided on the GloVe website and crowdAI competition, but named and organized as used in our code.
+Just extract the zip file into the `data` folder. The data is the same as provided on the GloVe website and crowdAI competition, but named and organized as used in our code. Please make sure that the data folder contains two subdirectories 'twitter-dataset' and 'glove_embeddings' instead of a another single 'data' subdirectory in order for the code to work. The twitter dataset should be in the directory 'data/twitter-dataset' and the glove embeddings should be in 'data/glove_embeddings'.
 
 ### Model weights
 Our final trained model can be downloaded from the following link:
 
 link 1: https://drive.google.com/open?id=1wbDzVXizOOwCdPRN3rQIWvKN-EvoHgO5
 
-mirror (in case of problems): 
+mirror (in case of problems): https://drive.google.com/open?id=1JRSItMMt_yJmc7AMzpZUj_ynru38wwze
 
 Exrtact the zip file into the `models_checkpoints` folder.
 
