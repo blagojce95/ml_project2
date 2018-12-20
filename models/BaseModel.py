@@ -136,6 +136,7 @@ class BaseModel():
         or it can be retrained on new data.
 
         """
+        print("Loading model...")
         model_json = json.load(open(self.model_json_path, "r"))
         self.model = model_from_json(model_json)
         self.model.load_weights(self.checkpoint_path)
