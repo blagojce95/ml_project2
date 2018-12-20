@@ -58,6 +58,10 @@ class BaseModel():
         self.model_json_path = os.path.join(self.model_dir, "model.json")
         self.history_path = os.path.join(self.model_dir, "history")
         
+    def build_model(self, embedding_matrix, seq_len, params):
+        raise NotImplementedError
+        
+        
     def train(self, X, y, epochs, batch_size, validation_data=None):
         """This method is used for training the model.
         
