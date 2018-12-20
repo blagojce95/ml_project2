@@ -4,11 +4,12 @@
 
 
 data/*
-!data/.gitkeep 
+!data/.gitkeep
 models_checkpoints/*
-!models_checkpoints/.gitkeep 
+!models_checkpoints/.gitkeep
 results/*
-!results/.gitkeep 
+!results/.gitkeep
+!results/final_LSTM.csv
 to_delete
 
 ### JupyterNotebook ###
