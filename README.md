@@ -26,9 +26,11 @@ The pretrained GloVe embeddings and the Twitter datasets can be downloaded from 
 link1: https://drive.google.com/open?id=1pqY5LHdB4R101G9MUaVygXeUYRgXX8k6
 link2: mac dodaj link tuka za redundunacy
 
-Just extract the zip file into the `data` folder.
+Just extract the zip file into the `data` folder. The data is the same as provided on the GloVe website and crowdAI competition, but named and organized as used in our code. 
 
 ## Installing
+
+This project does not require any installation. To use, simply clone the repository to your local machine using the following command:
 
 ```
 git clone https://github.com/mmilenkoski/ml_project1.git
@@ -46,7 +48,7 @@ The project is organized as follows:
     ├── results                         # Prediction files for submission on CrowdAI
     ├── Baseline_models.ipynb           # Jupyter notebook used for training and testing the baseline models
     ├── README.md                       # README file
-    ├── run.py                          # Script for running the optimal model, and creating a file with final predictions
+    ├── run.py                          # Script for running the final model, and creating a file with final predictions
     ├── train_CNN.py                    # Script for training the CNN model
     ├── train_CNN_LSTM.py               # Script for training the CNN-LSTM model
     ├── train_LSTM.py                   # Script for training the LSTM model
