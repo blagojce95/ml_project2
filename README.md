@@ -31,7 +31,7 @@ Just extract the zip file into the `data` folder. The data is the same as provid
 ### Model weights
 Our final trained model can be downloaded from the following link:
 
-link1: https://drive.google.com/file/d/1wbDzVXizOOwCdPRN3rQIWvKN-EvoHgO5/view?usp=sharing
+link1: https://drive.google.com/open?id=1wbDzVXizOOwCdPRN3rQIWvKN-EvoHgO5
 
 Exrtact the zip file into the `models_checkpoints` folder.
 
