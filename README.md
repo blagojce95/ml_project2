@@ -20,13 +20,21 @@ The project was created and tested with the following dependencies:
 - tensorflow-gpu=1.4.1
 ```
 
-### Datasets + additional resources
+### Datasets
 The pretrained GloVe embeddings and the Twitter datasets can be downloaded from the following links:
 
 link1: https://drive.google.com/open?id=1pqY5LHdB4R101G9MUaVygXeUYRgXX8k6
 link2: mac dodaj link tuka za redundunacy
 
-Just extract the zip file into the `data` folder. The data is the same as provided on the GloVe website and crowdAI competition, but named and organized as used in our code. 
+Just extract the zip file into the `data` folder. The data is the same as provided on the GloVe website and crowdAI competition, but named and organized as used in our code.
+
+### Model weights
+Our final trained model can be downloaded from the following link:
+
+link1: https://drive.google.com/file/d/1wbDzVXizOOwCdPRN3rQIWvKN-EvoHgO5/view?usp=sharing
+
+Exrtact the zip file into the `models_checkpoints` folder.
+
 
 ## Installing
 
@@ -56,7 +64,7 @@ The project is organized as follows:
     
 ## Running
 
-Before running the model, please unzip the `data.zip` file in the folder `data`. To reproduce our results run the following command:
+Before running the model, please unzip the `data.zip` file in the `data` folder and the `LSTM.zip` file in the `models_checkpoints` folder. To reproduce our results run the following command:
 
 ``` 
 python run.py
