@@ -21,7 +21,12 @@ The project was created and tested with the following dependencies:
 ```
 
 ### Datasets + additional resources
-blabla
+The pretrained GloVe embeddings and the Twitter datasets can be downloaded from the following links:
+
+link1: https://drive.google.com/open?id=1pqY5LHdB4R101G9MUaVygXeUYRgXX8k6
+link2: mac dodaj link tuka za redundunacy
+
+Just extract the zip file into the `data` folder.
 
 ## Installing
 
@@ -49,20 +54,24 @@ The project is organized as follows:
     
 ## Running
 
-Before training the model, please unzip the files `data/train.zip` and `data/test.zip` in the folder `data`. You can also unzip the file `data/sample-submission.zip` in order to see the format of the submissions for Kaggle. To reproduce our results run the following command:
+Before running the model, please unzip the `data.zip` file in the folder `data`. To reproduce our results run the following command:
 
 ``` 
 python run.py
 ```
 
-After running the script `run.py` you can find the generated predictions in the file `predictions/predictions.csv`. Our final predictions are in the file `predictions/predictions_final.csv` for comparison.
+After running the script `run.py` you can find the generated predictions in the file `results/LSTM.csv`. Our final predictions are in the file `results/final_LSTM.csv.csv` for comparison.
 
-## Tune hyperparameters
+## Training models
 
-We obtained the final hyperparameter using holdout validation and grid search. To train the model with your own hyperparameters, change their values in the file `utils/hyperparameters.py`, and run the script `run.py`
+If you want to train some of the model for example the CNN model, just run:
+
+```
+python train_CNN.py
+```
 
 ## Authors
 
-* Martin Milenkoski     martin.milenkoski@epfl.ch
 * Blagoj Mitrevski      blagoj.mitrevski@epfl.ch
+* Martin Milenkoski     martin.milenkoski@epfl.ch
 * Samuel Bosch          samuel.bosch@epfl.ch
